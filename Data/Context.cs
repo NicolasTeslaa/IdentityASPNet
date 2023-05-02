@@ -24,6 +24,10 @@ namespace IdentityASPNet.Data
             modelBuilder.Entity<UserRole>(userRole =>
             {
                 userRole.HasKey(ur => new { ur.UserId, ur.RoleId });
+                userRole.HasOne(ur => ur.Role)
+                                .WithMany(r => r.UserRoles)
+                                .HasForeignKey(ur => ur.RoleId)
+                                .IsRequired();
             });
         }
     }
