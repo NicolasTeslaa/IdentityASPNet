@@ -1,4 +1,4 @@
-using IdentityASPNet.Entities;
+using IdentityASPNet.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace IdentityASPNet.Data
@@ -15,6 +15,6 @@ namespace IdentityASPNet.Data
 
         }
 
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<User> Usuarios { get; set; }
     }
 }

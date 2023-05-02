@@ -1,5 +1,5 @@
 using IdentityASPNet.Data;
-using IdentityASPNet.Entities;
+using IdentityASPNet.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
-builder.Services.AddIdentity<Usuario, IdentityRole>()
+builder.Services.AddIdentity<User, IdentityRole>()
 .AddEntityFrameworkStores<Context>()
 .AddDefaultTokenProviders();
 var app = builder.Build();
