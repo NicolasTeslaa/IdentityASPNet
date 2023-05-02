@@ -6,5 +6,6 @@ namespace IdentityASPNet.Identity
         public string NomeCompleto { get; set; }
         public string Password { get; set; }
         public string ConfPassword { get; set; }
+        public IEnumerable<UserRole> UserRoles { get; set; }
     }
 }
