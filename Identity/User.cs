@@ -1,6 +1,8 @@
+using Microsoft.AspNetCore.Identity;
+
 namespace IdentityASPNet.Identity
 {
-    public class User
+    public class User : IdentityUser<int>
     {
         public string Id { get; set; }
         public string NomeCompleto { get; set; }
