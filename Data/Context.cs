@@ -16,5 +16,15 @@ namespace IdentityASPNet.Data
         }
 
         public DbSet<User> Usuarios { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<UserRole>(userRole =>
+            {
+                userRole.HasKey(ur => new { ur.UserId, ur.RoleId });
+            });
+        }
     }
 }
