@@ -1,9 +1,12 @@
 using IdentityASPNet.Identity;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace IdentityASPNet.Data
 {
     public class Context : DbContext
+    // <User, Role, int, IdentityUserClaim<int>, UserRole, IdentityUserLogin<int>, IdentityRoleClaim<int>, IdentityUserToken<int>>
     {
         public Context()
         {
@@ -36,5 +39,5 @@ namespace IdentityASPNet.Data
                                 .IsRequired();
             });
         }
-    }
+  }
 }
