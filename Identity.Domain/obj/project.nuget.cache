@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SqFVEegHW19+GMWcv5x0iNQkXrWBiLojW8UxpWwQnbPEHNGbgZL2ycuVgqGFeAm6QK4XLh4UArko3VzCrUaOAA==",
+  "dgSpecHash": "l9IitZQwB+rv990R2YirEGvtN9RCHpcFBmksFh66p0bGzaIHCif0DiU3ZnRhf1VmOziSXNGOvijhKd5Z5Ah+gQ==",
   "success": true,
   "projectFilePath": "D:\\Git\\IdentityASPNet\\Identity.Domain\\Identity.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\nicol\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512"
+  ],
   "logs": []
 }

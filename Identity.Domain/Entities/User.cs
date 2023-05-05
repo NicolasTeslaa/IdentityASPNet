@@ -13,7 +13,6 @@ namespace Identity.Domain.Entities
             Password = password;
         }
 
-
         public void ChangeName(string name)
         {
             Name = name;
