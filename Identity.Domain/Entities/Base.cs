@@ -10,6 +10,8 @@ namespace Identity.Domain.Entities
         internal List<string>? _errors;
         // le as propriedades acima
         public IReadOnlyCollection<string> Errors => _errors;
+
+
         public abstract bool Validate();
     }
 }
