@@ -12,6 +12,24 @@ namespace Identity.Domain.Entities
             Email = email;
             Password = password;
         }
+
+
+        public void ChangeName(string name)
+        {
+            Name = name;
+            Validate();
+        }
+
+        public void ChangePassword(string password)
+        {
+            Password = password;
+            Validate();
+        }
+        public void ChangeEmail(string email)
+        {
+            Email = email;
+            Validate();
+        }
         public override bool Validate()
         {
             throw new System.NotImplementedException();
