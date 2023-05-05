@@ -1,6 +1,6 @@
 namespace Identity.Domain.Validators
 {
-    public class UserValidator
+    public class UserValidator 
     {
         
     }
