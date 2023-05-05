@@ -12,9 +12,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
-builder.Services.AddIdentity<User, IdentityRole>()
-.AddEntityFrameworkStores<Context>()
-.AddDefaultTokenProviders();
+// builder.Services.AddIdentity<User, IdentityRole>()
+// .AddEntityFrameworkStores<Context>()
+// .AddDefaultTokenProviders();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
