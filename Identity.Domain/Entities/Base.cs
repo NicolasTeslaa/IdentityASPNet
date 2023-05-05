@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 
+
+// essa entidade será inserida em User, para que eles utilizem os recursos, por isso é uma abstract class
 namespace Identity.Domain.Entities
 {
     public abstract class Base
