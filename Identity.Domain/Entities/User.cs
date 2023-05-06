@@ -1,3 +1,5 @@
+using CrudClientesAPI.Entities.Models;
+
 namespace Identity.Domain.Entities
 {
     public class User : Base
@@ -29,9 +31,10 @@ namespace Identity.Domain.Entities
             Email = email;
             Validate();
         }
+
         public override bool Validate()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

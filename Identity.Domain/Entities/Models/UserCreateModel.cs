@@ -6,6 +6,14 @@ namespace CrudClientesAPI.Entities.Models
     {
         public UserCreateModel() { }
 
+        public UserCreateModel(string nomeCompleto, string email, string password, string confPassword)
+        {
+            NomeCompleto = nomeCompleto;
+            Email = email;
+            Password = password;
+            ConfPassword = confPassword;
+        }
+
         [Required(ErrorMessage = "Informe o nome completo ")]
         public string NomeCompleto { get; set; }
         [Required(ErrorMessage = "Informe o Email")]
