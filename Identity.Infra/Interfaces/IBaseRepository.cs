@@ -6,6 +6,7 @@ namespace Identity.Infra.Interfaces
     {
         Task<T> Create(T obj);
         Task<T> Update(T obj);
-
+        Task Remove(long Id);
+   
     }
 }
