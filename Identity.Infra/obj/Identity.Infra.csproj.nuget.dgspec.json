@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git\\IdentityASPNet\\Identity.Infra\\Identity.Infra.csproj": {}
+    "d:\\Git\\IdentityASPNet\\Identity.Infra\\Identity.Infra.csproj": {}
   },
   "projects": {
-    "D:\\Git\\IdentityASPNet\\Identity.Infra\\Identity.Infra.csproj": {
+    "d:\\Git\\IdentityASPNet\\Identity.Infra\\Identity.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git\\IdentityASPNet\\Identity.Infra\\Identity.Infra.csproj",
+        "projectUniqueName": "d:\\Git\\IdentityASPNet\\Identity.Infra\\Identity.Infra.csproj",
         "projectName": "Identity.Infra",
-        "projectPath": "D:\\Git\\IdentityASPNet\\Identity.Infra\\Identity.Infra.csproj",
+        "projectPath": "d:\\Git\\IdentityASPNet\\Identity.Infra\\Identity.Infra.csproj",
         "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
-        "outputPath": "D:\\Git\\IdentityASPNet\\Identity.Infra\\obj\\",
+        "outputPath": "d:\\Git\\IdentityASPNet\\Identity.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -25,8 +25,6 @@
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,6 +42,22 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
