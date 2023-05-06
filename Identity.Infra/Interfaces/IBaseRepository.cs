@@ -7,5 +7,4 @@ namespace Identity.Infra.Interfaces
     {
 
     }
-
 }

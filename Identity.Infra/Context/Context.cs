@@ -1,3 +1,4 @@
+using Identity.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Identity.Infra.Context

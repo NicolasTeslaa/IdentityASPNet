@@ -3468,11 +3468,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Git\\IdentityASPNet\\Identity.Infra\\Identity.Infra.csproj",
+      "projectUniqueName": "D:\\Git\\IdentityASPNet\\Identity.Infra\\Identity.Infra.csproj",
       "projectName": "Identity.Infra",
-      "projectPath": "d:\\Git\\IdentityASPNet\\Identity.Infra\\Identity.Infra.csproj",
+      "projectPath": "D:\\Git\\IdentityASPNet\\Identity.Infra\\Identity.Infra.csproj",
       "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
-      "outputPath": "d:\\Git\\IdentityASPNet\\Identity.Infra\\obj\\",
+      "outputPath": "D:\\Git\\IdentityASPNet\\Identity.Infra\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3486,6 +3486,8 @@
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

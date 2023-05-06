@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z/GCFfdSpyHJ9wXJolk037oIFsWvcoYGFj9xgG/lz3Y0zlJgYHrW6/Bf1MpvJIA1mGkAeVMk2+/mlfPPdyngGw==",
+  "dgSpecHash": "kc+ksBinRjcTL8LslRGornWqzbyhSU1h8QPMJBjE/lSHHxoNLImBP+GRhvN0OlvuPUKCWECN4FMPgNU6FdYnnw==",
   "success": true,
-  "projectFilePath": "d:\\Git\\IdentityASPNet\\Identity.Infra\\Identity.Infra.csproj",
+  "projectFilePath": "D:\\Git\\IdentityASPNet\\Identity.Infra\\Identity.Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicol\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\nicol\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
