@@ -8,5 +8,7 @@ namespace Identity.Infra.Interfaces
         Task<T> Update(T obj);
         Task Remove(long Id);
         Task<T> Get(long Id);
+        Task<List<T>> Get();
+
     }
 }
