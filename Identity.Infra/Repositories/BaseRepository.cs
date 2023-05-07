@@ -37,14 +37,23 @@ namespace Identity.Infra.Repositories
             }
 
         }
-        public Task<T> Get(long Id)
+        public virtual async Task<T> Get(long id)
         {
-            throw new NotImplementedException();
+            var obj = await _context.Set<T>()
+                                                .AsNoTracking()
+                                                .Where(x => x.Id == id)
+                                                .ToListAsync();
+
+            return obj.FirstOrDefault();
+
         }
 
-        public Task<List<T>> Get()
+        public async Task<List<T>> Get()
         {
-            throw new NotImplementedException();
+            return await _context.Set<T>()
+                                                .AsNoTracking()
+                                                .ToListAsync();
+
         }
 
 
