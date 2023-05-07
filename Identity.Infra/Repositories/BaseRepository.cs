@@ -33,6 +33,7 @@ namespace Identity.Infra.Repositories
             if (obj != null)
             {
                 _context.Remove(obj);
+                await _context.SaveChangesAsync();
             }
 
         }
