@@ -23,10 +23,18 @@ namespace Identity.Infra.Repositories
         public virtual async Task<T> Update(T obj)
         {
             _context.Entry(obj).State = EntityState.Modified;
-             await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
             return obj;
+        }
 
-           
+        public virtual async Task Remove(long id)
+        {
+            var obj = await Get(id);
+            if (obj != null)
+            {
+                _context.Remove(obj);
+            }
+
         }
         public Task<T> Get(long Id)
         {
@@ -38,10 +46,7 @@ namespace Identity.Infra.Repositories
             throw new NotImplementedException();
         }
 
-        public Task Remove(long Id)
-        {
-            throw new NotImplementedException();
-        }
+
 
 
     }
