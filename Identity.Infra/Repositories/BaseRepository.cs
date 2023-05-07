@@ -11,9 +11,12 @@ namespace Identity.Infra.Repositories
         {
             _context = context;
         }
-        public Task<T> Create(T obj)
+
+        public virtual async Task<T> Create(T obj)
         {
-            throw new NotImplementedException();
+            _context.Add(obj);
+            await _context.SaveChangesAsync();
+            return obj;
         }
 
         public Task<T> Get(long Id)
