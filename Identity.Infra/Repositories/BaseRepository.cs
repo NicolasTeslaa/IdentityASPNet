@@ -18,9 +18,11 @@ namespace Identity.Infra.Repositories
             await _context.SaveChangesAsync();
             return obj;
         }
-       public virtual async Task<T> Update(T obj)
+        public virtual async Task<T> Update(T obj)
         {
-           
+            _context.Update(obj);
+            await _context.SaveChangesAsync();
+            return obj;
         }
         public Task<T> Get(long Id)
         {
@@ -37,6 +39,6 @@ namespace Identity.Infra.Repositories
             throw new NotImplementedException();
         }
 
- 
+
     }
 }
