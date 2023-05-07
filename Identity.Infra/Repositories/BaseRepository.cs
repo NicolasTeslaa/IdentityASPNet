@@ -1,6 +1,8 @@
 using Identity.Domain.Entities;
 using Identity.Infra.Interfaces;
 using Identity.Infra.Context;
+using Microsoft.EntityFrameworkCore;
+
 namespace Identity.Infra.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : Base
@@ -20,9 +22,9 @@ namespace Identity.Infra.Repositories
         }
         public virtual async Task<T> Update(T obj)
         {
-            _context.Update(obj);
-            await _context.SaveChangesAsync();
-            return obj;
+            _context.Entry(obj).State = EntityState.Modified;
+             await _context.SaveChangesAsync();
+           
         }
         public Task<T> Get(long Id)
         {
