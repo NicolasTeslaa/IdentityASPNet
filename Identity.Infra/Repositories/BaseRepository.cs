@@ -24,6 +24,8 @@ namespace Identity.Infra.Repositories
         {
             _context.Entry(obj).State = EntityState.Modified;
              await _context.SaveChangesAsync();
+            return obj;
+
            
         }
         public Task<T> Get(long Id)
