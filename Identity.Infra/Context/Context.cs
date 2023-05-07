@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Identity.Infra.Context
 {
-    public class Context : DbContext
+    public class ManagerContext : DbContext
     {
-        public Context() { }
-        public Context(DbContextOptions<Context> options) : base(options){ }
+        public ManagerContext() { }
+        public ManagerContext(DbContextOptions<ManagerContext> options) : base(options){ }
         public DbSet<User> Usuarios { get; set; }
     }
 }
