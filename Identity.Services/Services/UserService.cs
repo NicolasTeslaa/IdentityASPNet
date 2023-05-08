@@ -3,6 +3,7 @@ using Identity.Core.Exceptions;
 using Identity.Domain.Entities;
 using Identity.Infra.Interfaces;
 using Identity.Services.DTO;
+using Identity.Services.Interfaces;
 
 namespace Identity.Services.Services
 {

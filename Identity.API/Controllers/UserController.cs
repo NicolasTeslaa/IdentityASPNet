@@ -2,8 +2,8 @@ using AutoMapper;
 using Identity.API.Utilites;
 using Identity.API.ViewModels;
 using Identity.Core.Exceptions;
-using Identity.Services;
 using Identity.Services.DTO;
+using Identity.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Identity.API.Controllers;

@@ -2,10 +2,8 @@ using AutoMapper;
 using Identity.API.ViewModels;
 using Identity.Domain.Entities;
 using Identity.Infra.Context;
-using Identity.Infra.Interfaces;
-using Identity.Infra.Repositories;
-using Identity.Services;
 using Identity.Services.DTO;
+using Identity.Services.Interfaces;
 using Identity.Services.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+
 #region AutoMapper
 var autoMapperConfig = new MapperConfiguration(cfg =>
 {
@@ -23,18 +22,19 @@ var autoMapperConfig = new MapperConfiguration(cfg =>
 #endregion
 
 #region DI
+// erro na linha abaixo Exited with error code -532462766
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
 #endregion
+
 builder.Services.AddDbContext<ManagerContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("Banco"))
-    );
+);
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
