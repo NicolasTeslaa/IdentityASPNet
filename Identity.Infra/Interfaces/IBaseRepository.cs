@@ -9,6 +9,5 @@ namespace Identity.Infra.Interfaces
         Task Remove(long Id);
         Task<T> Get(long Id);
         Task<List<T>> Get();
-
     }
 }
