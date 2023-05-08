@@ -24,9 +24,15 @@ namespace Identity.Infra.Repositories
             return user.FirstOrDefault();
         }
 
-        public Task<List<User>> SearchByEmail(string email)
+        public async Task<List<User>> SearchByEmail(string email)
         {
-            throw new NotImplementedException();
+            var allUsers = await _context.Users
+                                                            .Where(
+                                                                 x => x.Email.ToLower() == email.ToLower()
+                                                            )
+                                                            .AsNoTracking()
+                                                            .ToListAsync();
+            return allUsers;
         }
 
         public Task<List<User>> SearchByName(string name)
