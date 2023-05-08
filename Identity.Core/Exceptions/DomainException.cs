@@ -3,7 +3,7 @@ namespace Identity.Core.Exceptions
     public class DomainException : Exception
     {
         internal List<string> _errors;
-        public List<string> Errors => _errors;
+        public IReadOnlyCollection<string> Errors => _errors;
 
         public DomainException() { }
 
