@@ -27,40 +27,49 @@ namespace Identity.Services.Services
             var userCreated = await _userRepository.Create(user);
             return _mapper.Map<UserDTO>(userCreated);
         }
-
-        public Task<UserDTO> Get(long id)
+        public async Task<UserDTO> Update(UserDTO userDTO)
         {
-            throw new NotImplementedException();
+            var userExistente = await _userRepository.Get(userDTO.Id);
+            if (userExistente != null)
+                throw new DomainException("Não existe nenhum usuário com esse ID");
+            var user = _mapper.Map<User>(userDTO);
+            var userUpdated = await _userRepository.Update(user);
+            return _mapper.Map<UserDTO>(userUpdated);
+
+        }
+        public async Task<UserDTO> Get(long id)
+        {
+            var user = await _userRepository.Get(id);
+            return _mapper.Map<UserDTO>(user);
         }
 
-        public Task<List<UserDTO>> Get()
+        public async Task<List<UserDTO>> Get()
         {
-            throw new NotImplementedException();
+            var allUsers = await _userRepository.Get();
+            return _mapper.Map<List<UserDTO>>(allUsers);
         }
 
-        public Task<UserDTO> GetByEmail(string email)
+        public async Task<UserDTO> GetByEmail(string email)
         {
-            throw new NotImplementedException();
+            var user = await _userRepository.GetByEmail(email);
+            return _mapper.Map<UserDTO>(user);
         }
 
-        public Task Remove(long id)
+        public async Task Remove(long id)
         {
-            throw new NotImplementedException();
+            await _userRepository.Remove(id);
         }
 
-        public Task<List<UserDTO>> SearchByEmail(string email)
+        public async Task<List<UserDTO>> SearchByEmail(string email)
         {
-            throw new NotImplementedException();
+            var allUsers = await _userRepository.SearchByEmail(email);
+            return _mapper.Map<List<UserDTO>>(allUsers);
         }
 
-        public Task<List<UserDTO>> SearchByName(string name)
+        public async Task<List<UserDTO>> SearchByName(string name)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<UserDTO> Update(UserDTO userDTO)
-        {
-            throw new NotImplementedException();
+            var allUsers = await _userRepository.SearchByName(name);
+            return _mapper.Map<List<UserDTO>>(allUsers);
         }
     }
 }
