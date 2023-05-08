@@ -5,5 +5,7 @@ namespace Identity.Services
     public interface IUserService
     {
         Task<UserDTO> Create(UserDTO userDTO);
+        Task<UserDTO> Update(UserDTO userDTO);
+        
     }
 }
