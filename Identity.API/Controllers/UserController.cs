@@ -1,4 +1,5 @@
 using AutoMapper;
+using Identity.API.Utilites;
 using Identity.API.ViewModels;
 using Identity.Core.Exceptions;
 using Identity.Services;
@@ -37,13 +38,12 @@ public class UserController : ControllerBase
         }
         catch (DomainException ex)
         {
-
-            return BadRequest();
+            return BadRequest(Responses.DomainErrorMessage(ex.Message, ex.Errors));
         }
         catch (Exception)
         {
 
-            return StatusCode(500, "Erro");
+            return StatusCode(500, Responses.ApplicationErrorMessage());
         }
     }
 }

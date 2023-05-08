@@ -4,7 +4,7 @@ namespace Identity.API.Utilites;
 
 
 // classes staticas não precisam ser instanciadas
-public static class Response
+public static class Responses
 {
     public static ResultViewModel ApplicationErrorMessage()
     {
@@ -25,7 +25,7 @@ public static class Response
         };
     }
 
-    public static ResultViewModel DomainErrorMessage(string message, List<string> errors)
+    public static ResultViewModel DomainErrorMessage(string message, IReadOnlyCollection<string> errors)
     {
         return new ResultViewModel
         {
