@@ -9,6 +9,8 @@ namespace Identity.Services
         Task Remove(long id);
         Task<UserDTO> Get(long id);
         Task<List<UserDTO>> Get();
-        
+        Task<List<UserDTO>> SearchByName(string name);
+        Task<List<UserDTO>> SearchByEmail(string email);
+
     }
 }
