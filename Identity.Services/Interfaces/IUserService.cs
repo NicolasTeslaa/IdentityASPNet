@@ -7,6 +7,7 @@ namespace Identity.Services
         Task<UserDTO> Create(UserDTO userDTO);
         Task<UserDTO> Update(UserDTO userDTO);
         Task Remove(long id);
+        Task<UserDTO> Get(long id);
         
     }
 }
