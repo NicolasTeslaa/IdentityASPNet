@@ -35,9 +35,15 @@ namespace Identity.Infra.Repositories
             return allUsers;
         }
 
-        public Task<List<User>> SearchByName(string name)
+        public async Task<List<User>> SearchByName(string name)
         {
-            throw new NotImplementedException();
+            var allUsers = await _context.Users
+                                                                  .Where(
+                                                                       x => x.Name.ToLower() == name.ToLower()
+                                                                  )
+                                                                  .AsNoTracking()
+                                                                  .ToListAsync();
+            return allUsers;
         }
     }
 }
