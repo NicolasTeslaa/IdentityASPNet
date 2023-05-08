@@ -1,5 +1,3 @@
-using CrudClientesAPI.Entities.Models;
-
 namespace Identity.Domain.Entities
 {
     public class User : Base
