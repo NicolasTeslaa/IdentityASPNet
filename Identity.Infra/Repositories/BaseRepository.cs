@@ -35,7 +35,6 @@ namespace Identity.Infra.Repositories
                 _context.Remove(obj);
                 await _context.SaveChangesAsync();
             }
-
         }
         public virtual async Task<T> Get(long id)
         {
@@ -43,9 +42,7 @@ namespace Identity.Infra.Repositories
                                                 .AsNoTracking()
                                                 .Where(x => x.Id == id)
                                                 .ToListAsync();
-
             return obj.FirstOrDefault();
-
         }
 
         public async Task<List<T>> Get()
@@ -53,11 +50,6 @@ namespace Identity.Infra.Repositories
             return await _context.Set<T>()
                                                 .AsNoTracking()
                                                 .ToListAsync();
-
         }
-
-
-
-
     }
 }

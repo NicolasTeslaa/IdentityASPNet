@@ -1132,6 +1132,20 @@
             "rid": "win"
           }
         }
+      },
+      "Identity.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
+        },
+        "compile": {
+          "bin/placeholder/Identity.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Identity.Domain.dll": {}
+        }
       }
     }
   },
@@ -3452,10 +3466,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Identity.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Identity.Domain/Identity.Domain.csproj",
+      "msbuildProject": "../Identity.Domain/Identity.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Identity.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5"
@@ -3493,7 +3513,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Git\\IdentityASPNet\\Identity.Domain\\Identity.Domain.csproj": {
+              "projectPath": "D:\\Git\\IdentityASPNet\\Identity.Domain\\Identity.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
